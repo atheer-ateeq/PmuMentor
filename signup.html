@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PmuMentor - Sign Up</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="stylesheet" href="css/page-styles.css">
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex; 
+            font-family: Arial, sans-serif;
+        }        
+        .signup-form-area {
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            background-color: #fff;
+            padding: 40px;
+        }
+        .welcome-sidebar {
+            flex: 1.5; 
+            background-color: #004c99; 
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .signup-form-content {
+            width: 90%;
+            max-width: 600px;
+        }
+        .header-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header-logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .header-logo span {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #004c99;
+        }
+        .form-group {
+            display: flex;
+            gap: 20px;
+        }
+        .form-group input, .full-input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        select.full-input {
+            appearance: none; 
+            background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="292.4" height="292.4" viewBox="0 0 292.4 292.4"><path fill="%23666" d="M287 69.4a17.6 17.6 0 00-24.9 0l-117.8 117.8L30.3 69.4a17.6 17.6 0 00-24.9 24.9l130.3 130.3a17.6 17.6 0 0024.9 0L287 94.3a17.6 17.6 0 000-24.9z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            background-size: 10px;
+            padding-right: 30px; 
+        }
+        .form-group > div {
+            flex: 1;
+        }
+        .signup-form-content .btn-signup {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .sidebar-welcome-text {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-form-area">
+        <div class="signup-form-content">
+            
+            <div class="header-logo">
+                <img src="img/Pmu.png" alt="PMU Logo">
+                <span>PmuMentor</span>
+            </div>
+
+            <h2 style="font-size: 1.8em; margin-bottom: 20px;">Sign up</h2>
+            
+            <form action="index.html" method="post">
+                
+                <div class="form-group">
+                    <div>
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" placeholder="Example@gmail.com" required>
+                    </div>
+                    <div>
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" placeholder="Example@gmail.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Example@gmail.com" required>
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" placeholder="Example@gmail.com" required>
+                    </div>
+                </div>
+
+                <label for="role">Role</label>
+                <select id="role" class="full-input" required>
+                    <option value="" disabled selected>Mentor/Mentee</option>
+                    <option value="mentor">Mentor</option>
+                    <option value="mentee">Mentee</option>
+                </select>
+
+                <label for="password">Password</label>
+                <div style="position: relative;">
+                    <input type="password" id="password" placeholder="**************" class="full-input" required>
+                    <span style="position: absolute; right: 10px; top: 12px; color: #666; cursor: pointer;">&#128065;</span> 
+                </div>
+
+                <label for="confirm-password">Confirm Password</label>
+                <div style="position: relative;">
+                    <input type="password" id="confirm-password" placeholder="**************" class="full-input" required>
+                    <span style="position: absolute; right: 10px; top: 12px; color: #666; cursor: pointer;">&#128065;</span> 
+                </div>
+
+                <div style="margin-bottom: 20px; font-size: 0.9em;">
+                    <input type="checkbox" id="terms" required style="width: auto; margin-right: 5px;">
+                    <label for="terms">I agree to all <a href="#" style="color: #007bff;">Terms</a> and <a href="#" style="color: #007bff;">Privacy Policies</a></label>
+                </div>
+                
+                <button type="submit" class="btn-signup">Sign up</button>
+            </form>
+            
+            <p style="text-align: center; margin-top: 20px; font-size: 0.9em;">
+                Already have an account? <a href="login.html" style="color: #007bff; text-decoration: none;">Sign in</a>
+            </p>
+
+        </div>
+    </div>
+
+    <div class="welcome-sidebar">
+        
+        
+        <img src="img/pngwing.com.png" alt="Welcome Illustration" style="max-width: 60%; height: auto; display: block; margin-bottom: 40px;">
+        
+        <div class="sidebar-welcome-text">
+            Welcome to PmuMentor
+        </div>
+        
+        <p style="font-size: 1em; line-height: 1.5;">
+            Join our community that have more than 10000 <br> Mentors and Mentees and learn new things
+        </p>
+
+    </div>
+
+</body>
+</html>

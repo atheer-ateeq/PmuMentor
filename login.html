@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PmuMentor - Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/page-styles.css">
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        .login-container {
+            display: flex;
+            width: 100%; 
+            height: 100%;
+            box-shadow: none; 
+            border-radius: 0;
+            overflow: hidden;
+            background-color: #fff;
+        }
+        .login-image-side {
+            flex: 1; 
+            max-width: 60%; 
+            background-image: url('img/pmu-gate.jpg'); 
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+        }
+        .login-form-side {
+            flex: 1; 
+            min-width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .logo-section img {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+        }
+        .logo-section h1 {
+            font-size: 1.8em;
+            color: #004c99;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #f7f7f7; 
+            font-size: 1em;
+        }
+
+        .password-input-wrapper {
+            position: relative;
+        }
+        .password-input-wrapper .eye-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #999;
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+        }
+
+        .remember-me input {
+            margin-right: 5px;
+        }
+
+        .forgot-password a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .btn-sign-in {
+            width: 100%;
+            max-width: 300px;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .signup-link {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .signup-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        
+        <div class="login-image-side">
+            </div>
+
+        <div class="login-form-side">
+            
+            <div class="logo-section">
+                <img src="img/pmu.png" alt="PmuMentor Logo"> 
+                <h1>PmuMentor</h1>
+            </div>
+
+            <h2>Nice to see you again</h2>
+
+            <form action="index.html" method="GET"> 
+                <div class="form-group">
+                    <label for="email">Login</label>
+                    <input type="email" id="email" placeholder="Email or phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="password" placeholder="Enter password" required>
+                        <span class="eye-icon">&#128065;</span> 
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember" style="display: inline; font-weight: normal;">Remember me</label>
+                    </div>
+                    <div class="forgot-password">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-sign-in">Sign in</button>
+            </form>
+            
+            <div class="signup-link">
+                Don't have an account? <a href="signup.html">Sign up now</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
